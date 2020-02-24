@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Google Fonts -->
+    <link 
+        href=href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nanum+Myeongjo|Patua+One|Zilla+Slab&display=swap" 
+        rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css" crossorigin="anonymous">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+    <!-- Your own CSS -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <title>News</title>
+  </head>
+  <body>
+
+    <div class="container mt-5">
+      <h1>The <%= @location%> Daily</h1>
+    <h2> Current Weather in <p3><%= @location%></p3></h2>
+    <p> In <%= @location%>, it is currently <p2><i class="fas fa-temperature-high"></i><%= @current_temperature %></p2> and <p2><%= @conditions %></p2> </p>
+    <p> We are looking at a seven-day forecast of :</p>
+
+    <table class="table table-borderless">
+    <thead>
+        <tr>
+        <th scope="col">Day</th>
+        <th scope="col">Monday</th>
+        <th scope="col">Tuesday</th>
+        <th scope="col">Wednesday</th>
+        <th scope="col">Thursday</th>
+        <th scope="col">Friday</th>
+        <th scope="col">Saturday</th>
+        <th scope="col">Sunday</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">High of (℉)</th>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus1_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus2_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus3_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus4_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus5_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus6_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus7_high%></td>
+        </tr>
+        <tr>
+        <th scope="row">Conditions</th>
+        <td><%=@Day_plus1_summary%></td>
+        <td><%=@Day_plus2_summary%></td>
+        <td><%=@Day_plus3_summary%></td>
+        <td><%=@Day_plus4_summary%></td>
+        <td><%=@Day_plus5_summary%></td>
+        <td><%=@Day_plus6_summary%></td>
+        <td><%=@Day_plus7_summary%></td>
+        </tr>
+    </body>
+    </table>
+
+    <h2> Headline News:</h2>
+
+    </div>
+
+<!-- Card groups -->
+
+<div class = "container mt-5">
+  <div class="card-group">
+    <div class="card">
+      <img class="card-img-top" src="red_dead_redemp.jpg">
+      <div class="card-body">
+        <h3 class="card-title"> <%= @article1_title %></h3>
+        <p class="card-text"> <%= @article1_content%> ></p>
+        <a href="<%=@article1_link%>" class="btn btn-outline-dark">Read full article</a>
+        <p class="card-text"><small class="text-muted">Added February 2020</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="tesla_cybertruck.jpg">
+      <div class="card-body">
+        <h3 class="card-title"> <%= @article2_title %></h3>
+        <p class="card-text"> <%= @article2_content%> ></p>
+        <a href="<%=@article2_link%>" class="btn btn-outline-dark">Read full article</a>
+        <p class="card-text"><small class="text-muted">Added February 2020</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="bts.jpeg">
+      <div class="card-body">
+        <h3 class="card-title"> <%= @article3_title %></h3>
+        <p class="card-text"> <%= @article3_content%> ></p>
+        <a href="<%=@article3_link%>" class="btn btn-outline-dark">Read full article</a>
+        <p class="card-text"><small class="text-muted">Added February 2020</small></p>
+      </div>
+    </div>
+    <div class="card">
+      <img class="card-img-top" src="boswell.jpg">
+      <div class="card-body">
+        <h3 class="card-title"> <%= @article4_title %></h3>
+        <p class="card-text"> <%= @article4_content%> ></p>
+        <a href="<%=@article4_link%>" class="btn btn-outline-dark">Read full article</a>
+        <p class="card-text"><small class="text-muted">Added February 2020</small></p>
+      </div>
+    </div>
+  </div>
+</div>
+  
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

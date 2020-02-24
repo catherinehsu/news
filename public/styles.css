@@ -1,0 +1,56 @@
+/* Typography */
+body {
+    /*Everything is 'Nanum Myeongjo'*/
+    font-family: 'Nanum Myeongjo', ;
+    font-size: 12pt;
+    color: black;
+}
+
+h1{
+    font-family: 'Patua One', ;
+    font-size: 60pt;
+    color: black;
+    text-transform: uppercase;
+    text-align: center
+}
+
+h2{
+    font-family: 'Patua One', ;
+    font-size: 22pt;
+    color: black;
+    text-transform: uppercase;
+}
+
+h3{
+    font-family: 'Patua One', ;
+    font-size: 14pt;
+    color: black;
+    text-transform: uppercase;
+}
+
+p2{
+    font-family: 'Patua One', ;
+    font-size: 12pt;
+    color: blue;
+    text-transform: uppercase;
+}
+
+p3{
+    font-family: 'Patua One', ;
+    font-size: 22pt;
+    color: blue;
+    text-transform: uppercase;   
+}
+
+  /* Card Elements */
+  .card img{
+      height: 500px;
+      object-fit: cover;
+  }
+
+  /* Weather Table */
+  .table thead{
+      background-color: black;
+      color: white;
+      text-transform: uppercase;
+  }
