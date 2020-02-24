@@ -7,7 +7,7 @@
 
     <!-- Google Fonts -->
     <link 
-        href=href="https://fonts.googleapis.com/css?family=Libre+Baskerville|Nanum+Myeongjo|Patua+One|Zilla+Slab&display=swap" 
+        href="https://fonts.googleapis.com/css?family=Fredericka+the+Great|Holtwood+One+SC|Libre+Baskerville|Nanum+Myeongjo|Patua+One|Rakkas|Rye|Suez+One|Zilla+Slab|Zilla+Slab+Highlight:400,700&display=swa" 
         rel="stylesheet">
     
     <!-- Font Awesome -->
@@ -24,8 +24,15 @@
   <body>
 
     <div class="container mt-5">
+
+    <hr class ="my-4" id= "topbreak">
+
       <h1>The <%= @location%> Daily</h1>
-    <h2> Current Weather in <p3><%= @location%></p3></h2>
+
+    <hr class ="my-4" id= "bottombreak">
+
+    <h2> Current Weather in <p3><%= @location%></p3><a href="/"><p4>  (Wrong city? click here)</p4></a></h2>
+
     <p> In <%= @location%>, it is currently <p2><i class="fas fa-temperature-high"></i><%= @current_temperature %></p2> and <p2><%= @conditions %></p2> </p>
     <p> We are looking at a seven-day forecast of :</p>
 
@@ -75,7 +82,7 @@
 <div class = "container mt-5">
   <div class="card-group">
     <div class="card">
-      <img class="card-img-top" src="red_dead_redemp.jpg">
+      <img class="card-img-top" src="https://picsum.photos/id/<%=@rand_img1%>/200/300">
       <div class="card-body">
         <h3 class="card-title"> <%= @article1_title %></h3>
         <p class="card-text"> <%= @article1_content%> ></p>
@@ -84,7 +91,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="tesla_cybertruck.jpg">
+      <img class="card-img-top" src="https://picsum.photos/id/<%=@rand_img2%>/200/300">
       <div class="card-body">
         <h3 class="card-title"> <%= @article2_title %></h3>
         <p class="card-text"> <%= @article2_content%> ></p>
@@ -93,7 +100,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="bts.jpeg">
+      <img class="card-img-top" src="https://picsum.photos/id/<%=@rand_img3%>/200/300">
       <div class="card-body">
         <h3 class="card-title"> <%= @article3_title %></h3>
         <p class="card-text"> <%= @article3_content%> ></p>
@@ -102,7 +109,7 @@
       </div>
     </div>
     <div class="card">
-      <img class="card-img-top" src="boswell.jpg">
+      <img class="card-img-top" src="https://picsum.photos/id/<%=@rand_img4%>/200/300">
       <div class="card-body">
         <h3 class="card-title"> <%= @article4_title %></h3>
         <p class="card-text"> <%= @article4_content%> ></p>

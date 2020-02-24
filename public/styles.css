@@ -1,45 +1,54 @@
 /* Typography */
 body {
     /*Everything is 'Nanum Myeongjo'*/
-    font-family: 'Nanum Myeongjo', ;
+    font-family: 'Nanum Myeongjo';
     font-size: 12pt;
     color: black;
 }
 
 h1{
-    font-family: 'Patua One', ;
-    font-size: 60pt;
+    font-family: 'Zilla Slab';
+    font-size: 65pt;
     color: black;
     text-transform: uppercase;
-    text-align: center
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
 }
 
 h2{
-    font-family: 'Patua One', ;
+    font-family: 'Zilla Slab';
     font-size: 22pt;
     color: black;
     text-transform: uppercase;
 }
 
 h3{
-    font-family: 'Patua One', ;
+    font-family: 'Zilla Slab';
     font-size: 14pt;
     color: black;
     text-transform: uppercase;
 }
 
 p2{
-    font-family: 'Patua One', ;
+    font-family: 'Zilla Slab';
     font-size: 12pt;
     color: blue;
     text-transform: uppercase;
 }
 
 p3{
-    font-family: 'Patua One', ;
+    font-family: 'Zilla Slab Highlight';
     font-size: 22pt;
     color: blue;
     text-transform: uppercase;   
+}
+
+p4{
+    font-family: 'Nanum Myeongjo';
+    font-size: 8pt;
+    color: black;
+    text-transform: lowercase;
 }
 
   /* Card Elements */
@@ -53,4 +62,14 @@ p3{
       background-color: black;
       color: white;
       text-transform: uppercase;
+  }
+
+  /* Horizontal Break */
+  #topbreak {
+      border-top: 1px solid red;
+  }
+
+  #bottombreak {
+        border: 10px solid black;
+        border-radius: 1px;
   }

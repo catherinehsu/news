@@ -74,6 +74,11 @@ get "/news" do
     @article4_link = @news["articles"][3]["url"]
     @article4_content = @news["articles"][3]["content"]
 
+    #random image generator
+    @rand_img1 = rand(1..200)
+    @rand_img2 = rand(201..400)
+    @rand_img3 = rand(401..600)
+    @rand_img4 = rand(601..800)
 
     view "news"
 end
