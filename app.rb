@@ -29,7 +29,19 @@ get "/news" do
     @current_temperature = @forecast["currently"]["temperature"]
     @conditions = @forecast["currently"]["summary"]
 
+
     @daily_array = @forecast["daily"]["data"]
+
+    #IGNORE NEXT SECTION - this is using individual pulls, not loops
+    @day_0 = Time.at(@daily_array[0]["time"]).strftime("%a")
+    @day_1 = Time.at(@daily_array[1]["time"]).strftime("%a")
+    @day_2 = Time.at(@daily_array[2]["time"]).strftime("%a")
+    @day_3 = Time.at(@daily_array[3]["time"]).strftime("%a")
+    @day_4 = Time.at(@daily_array[4]["time"]).strftime("%a")
+    @day_5 = Time.at(@daily_array[5]["time"]).strftime("%a")
+    @day_6 = Time.at(@daily_array[6]["time"]).strftime("%a")
+    @day_7 = Time.at(@daily_array[7]["time"]).strftime("%a")
+    
     @Day_plus1_high = @daily_array[1]["temperatureHigh"]
     @Day_plus2_high = @daily_array[2]["temperatureHigh"]
     @Day_plus3_high = @daily_array[3]["temperatureHigh"]
@@ -45,14 +57,6 @@ get "/news" do
     @Day_plus5_summary = @daily_array[5]["summary"]
     @Day_plus6_summary = @daily_array[6]["summary"]
     @Day_plus7_summary = @daily_array[7]["summary"]
-        
-    #for @daily in @daily_array
-    #puts "A high temperature of #{@daily["temperatureHigh"]} and #{@daily["summary"]}"
-    #end
-       #for @daily in @daily_array
-       #@daily["temperatureHigh"]
-       #@daily ["summary"]
-       #end
     
     #Headline
     @news = HTTParty.get(url).parsed_response.to_hash

@@ -1,3 +1,5 @@
+#NOTE: PLEASE IGNORE THIS erb FILE AND USE "news.erb" INSTEAD. It contains old code that I'm hoping to keep for future reference.
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,6 +38,45 @@
     <p> In <%= @location%>, it is currently <p2><i class="fas fa-temperature-high"></i><%= @current_temperature %></p2> and <p2><%= @conditions %></p2> </p>
     <p> We are looking at a seven-day forecast of :</p>
 
+    #This is using individual pulls; not loops
+    <table class="table table-borderless">
+    <thead>
+        <tr>
+        <th scope="col">Day</th>
+        <th scope="col"><%=@day_1%></th>
+        <th scope="col"><%=@day_2%></th>
+        <th scope="col"><%=@day_3%></th>
+        <th scope="col"><%=@day_4%></th>
+        <th scope="col"><%=@day_5%></th>
+        <th scope="col"><%=@day_6%></th>
+        <th scope="col"><%=@day_7%></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+        <th scope="row">High of (℉)</th>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus1_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus2_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus3_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus4_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus5_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus6_high%></td>
+        <td><i class="fas fa-temperature-high"></i><%=@Day_plus7_high%></td>
+        </tr>
+        <tr>
+        <th scope="row">Conditions</th>
+        <td><%=@Day_plus1_summary%></td>
+        <td><%=@Day_plus2_summary%></td>
+        <td><%=@Day_plus3_summary%></td>
+        <td><%=@Day_plus4_summary%></td>
+        <td><%=@Day_plus5_summary%></td>
+        <td><%=@Day_plus6_summary%></td>
+        <td><%=@Day_plus7_summary%></td>
+        </tr>
+    </body>
+    </table>
+
+    #This is what is included in the assignment submission
     <div class = "row mt-4">
         <div class = "col-sm">
             <h4><em>Day</em></h4>
@@ -49,7 +90,36 @@
             <p><%= day["summary"] %></p>
         </div>
         <% end%>
+       
     </div>
+
+    #This is an attempt at loops using tables. Couldn't figure out how to present it all in one vs. all separate tables looped
+    <div class = "container-mt-5">
+        <h2> Extended Forecast using loops v2 </h2>
+        <p>
+        <% for day in @daily_array %>
+             <table class="table table-borderless">
+                <thead>
+                    <tr> 
+                    <th scope="col">Day</th>
+                    <th scope="col text-left-align"><%= Time.at(day["time"]).strftime("%a")%></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <th scope="row text-left-align">High of (℉)</th>
+                    <td><i class="fas fa-temperature-high"></i><%= day["temperatureHigh"] %></td>
+                    </tr>
+                    <tr>
+                    <th scope="row text-left-align">Conditions</th>
+                    <td><%= day["summary"] %></td>
+                    </tr>
+                </tbody>
+            </table>
+        <% end %>
+        </p>
+    </div>
+
 
     <h2> Headline News:</h2>
 
